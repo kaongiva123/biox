@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моя Биография</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Canvas для анимированных частиц (фон) -->
+  <canvas id="particles"></canvas>
+  
+  <header>
+    <nav>
+      <a href="#home">Главная</a>
+      <a href="#about">Обо мне</a>
+      <a href="#services">Услуги</a>
+      <a href="#achievements">Достижения</a>
+      <a href="#testimonials">Отзывы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+  
+  <!-- Секция "Главная" с эффектом печатающейся строки -->
+  <section id="home" class="section">
+    <div class="container hidden">
+      <h1>Привет, я XDolbaebov</h1>
+      <div id="typewriter"></div>
+      <a href="#about" class="button">Узнать больше</a>
+    </div>
+  </section>
+  
+  <!-- Секция "Обо мне" -->
+  <section id="about" class="section">
+    <div class="container hidden">
+      <!-- Изменён путь к фотографии -->
+      <img src="photo/me.jpg" alt="Твое Фото">
+      <h2>Обо мне</h2>
+      <p>Я Долбаеб, и делаю ботов для тимы епта, аъуеный крутой тип, сделаю все профи типо емае</p>
+    </div>
+  </section>
+  
+  <!-- Секция "Услуги" -->
+  <section id="services" class="section">
+    <div class="container hidden">
+      <h2>Мои услуги</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Консультации</h3>
+          <p>Поговорим, обговорим что куда кого куда</p>
+        </div>
+        <div class="service-card">
+          <h3>Проекты</h3>
+          <p>Ебну бота, все будет заебумба епта.</p>
+        </div>
+        <div class="service-card">
+          <h3>Поддержка</h3>
+          <p>Помогу настроить и подключить бота на сервер епта.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Секция "Достижения" с анимированными счётчиками -->
+  <section id="achievements" class="section">
+    <div class="container hidden">
+      <h2>Достижения</h2>
+      <div class="achievements-grid">
+        <div class="achievement">
+          <div class="number" data-target="2">0</div>
+          <div class="label">Года опыта</div>
+        </div>
+        <div class="achievement">
+          <div class="number" data-target="3">0</div>
+          <div class="label">Проекта</div>
+        </div>
+        <div class="achievement">
+          <div class="number" data-target="3">0</div>
+          <div class="label">Клиента</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Секция "Отзывы" с слайдером и модальным окном для подробного просмотра -->
+  <section id="testimonials" class="section">
+    <div class="container hidden">
+      <h2>Отзывы</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial active" data-fulltext="хочу сказать большое спасибо - @ownerdolbaebov, что сделал мне этого ебучего бота и хочу чтобы ты помогал мне с ним в дальнейшем, потому что я тупой нихуя не понимаю с ним особо, но принцип работы ясен. этот бот просто ахуенен, спасибо что не посылал меня нахуй на возможно для тебя глупые вопросы, я очень благодарен тебе за данную работу, все сделано ахуенно">
+          <p>«хочу сказать большое спасибо - @ownerdolbaebov, что сделал мне этого ебучего бота и хочу чтобы ты помогал мне с ним в дальнейшем»</p>
+          <h4>- @gepoteza</h4>
+          <button class="more-btn">Подробнее</button>
+        </div>
+        <div class="testimonial" data-fulltext="Сделал четко, красиво и главное быстро
+        Спасибо @@ownerdolbaebov за бота">
+          <p>«Сделал четко, красиво и главное быстро»</p>
+          <h4>- @by_flake</h4>
+          <button class="more-btn">Подробнее</button>
+        </div>
+    </div>
+  </section>
+  
+  <!-- Секция "Контакты" - только Telegram -->
+  <section id="contact" class="section">
+    <div class="container hidden">
+      <h2>Контакты</h2>
+      <p>Что бы со мной пообщаться, обговорить, что куда - пиши в телегу почти всегда в сети</p>
+      <p style="margin-top:20px;">Telegram: <a href="https://t.me/xDolbaebov" target="_blank" style="color: #ff9800; text-decoration: none;">@xDolbaebov</a></p>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 xDolbaebov.  Я нихуя не защищаю, я мирняк.</p>
+  </footer>
+  
+  <!-- Кнопка прокрутки вверх -->
+  <button id="scrollTopBtn">&#8679;</button>
+  
+  <!-- Модальное окно для подробного отзыва -->
+  <div id="testimonialModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalText"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
